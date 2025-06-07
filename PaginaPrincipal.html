@@ -3,12 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--tipografia roja----------------------------------------->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap" rel="stylesheet">
+
+    <!--tipografia corrida-------------------------------->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Rubik+Glitch&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="PaginaPrincipal.css">
+    <script src="PaginaPrincipal.js"></script>
+
     <title>Hambrientos</title>
 </head>
 <body>
 
-<h1>HAMBRIENTOS</h1>
+    <!--HEADERO O NAVBAR-->
+<header>
+    <h1>HAMBRIENTOS</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Sobre Nosotros</a></li>
+        <li><a href="#">Cuenta</a></li>
+      </ul>
+    </nav>
+  </header>
 
     <!-------------- CATALOGO------------------->
 
@@ -17,12 +42,14 @@
             <img src="CheesBurger.webp">
         </div>
         <div class="Dinamico">
-        <div class="NombreBurger">Simple CheesBurger</div>
+        <div class="NombreBurger">SIMPLE CHESSBURGER</div>
         <div class="Descripcion">
             Pan original, medallón 90g, cheddar, ketchup, mostaza, cebolla brunoise. Con papas fritas.
         </div>
         <div class="Precio">$7.000 </div>
-        <button class="Boton">Sumar al pedido</button> 
+        <button onclick="sumarPrecio(7000)">Sumar al pedido</button>
+        <button onclick="restarPrecio(7000)">Restar al pedido</button> 
+ 
 
         </div>
         </div>
@@ -33,29 +60,114 @@
             <img src="DobleCheesBurger.webp">
         </div>
         <div class="Dinamico">
-        <div class="NombreBurger">Doble CheesBurger</div>
+        <div class="NombreBurger">DOBLE CHESSBURGER</div>
         <div class="Descripcion">
             Doble carne (100 gr c/u), cuadruple cheddar en pan de papa neutro
         </div>
         <div class="Precio">$10.000 </div>
-        <button class="Boton">Sumar al pedido</button> 
+        <button onclick="sumarPrecio(10000)">Sumar al pedido</button> 
+        <button onclick="restarPrecio(10000)">Restar al pedido</button> 
+
+        </div>
+        </div>
+
+    </div>
+      <div class="Burger">
+        <div id="imagen">
+            <img src="HamburguesaClasica.webp">
+        </div>
+        <div class="Dinamico">
+        <div class="NombreBurger">Hamburguesa Clasica</div>
+        <div class="Descripcion">
+            Medallón de carne, jamón, cheddar, lechuga, tomate y salsa 1/4 de libra en pan de papa.
+        </div>
+        <div class="Precio">$10.000 </div>
+        <button onclick="sumarPrecio(10000)">Sumar al pedido</button> 
+        <button onclick="restarPrecio(10000)">Restar al pedido</button> 
+
 
         </div>
         </div>
     </div>
+
+        <div class="Burger">
+        <div id="imagen">
+            <img src="HamburguesaBajoncito.webp">
+        </div>
+        <div class="Dinamico">
+        <div class="NombreBurger">Hamburguesa Bajoncito</div>
+        <div class="Descripcion">
+            Medallón de carne con cheddar, panceta ahumada y manteca de hierbas en pan de papa.
+        </div>
+        <div class="Precio">$8.000 </div>
+        <button onclick="sumarPrecio(8000)">Sumar al pedido</button> 
+        <button onclick="restarPrecio(8000)">Restar al pedido</button>  
+
+        </div>
+        </div>
+    </div>
+    
+    <div class="Burger">
+        <div id="imagen">
+            <img src="HamburguesaHambrientos.webp">
+        </div>
+        <div class="Dinamico">
+        <div class="NombreBurger">Hamburguesa Hambrientos</div>
+        <div class="Descripcion">
+            Doble carne, doble cheddar, pulled pork, tomate, pepinillos, cebolla caramelizada, lechuga y salsa BBQ casera en pan de papa.
+        </div>
+        <div class="Precio">$13.000 </div>
+        <button onclick="sumarPrecio(13000)">Sumar al pedido</button> 
+        <button onclick="restarPrecio(13000)">Restar al pedido</button>  
+
+
+        </div>
+        </div>
+    </div>
+
+ <div class="Burger">
+        <div id="imagen">
+            <img src="HamburguesaVeggie.webp">
+        </div>
+        <div class="Dinamico">
+        <div class="NombreBurger"> Hamburguesa Veggie</div>
+        <div class="Descripcion">
+           Doble medallón NotCo. (100% vegano) cheddar,huevo, aros de cebolla y salsa puerto en pan de papa.
+        </div>
+        <div class="Precio">$9.000 </div>
+        <button onclick="sumarPrecio(9000)">Sumar al pedido</button> 
+        <button onclick="restarPrecio(9000)">Restar al pedido</button>
+        </div>
+        </div>
+    </div>
+
     
     <!-------------- CUADRADO DEL TOTAL------------------->
      <div class="Total">
       <div><strong>Total</strong></div>
-      <div>$0</div>
+      <div id="total">$0</div>
 
     <div class="CUPON"><strong>Cupón de descuento</strong></div>
     <div class="DESCUENTO">
-      <input type="text" class="codigo" placeholder="Ingresá tu cupón">
-      <button class="estiloboton">Aplicar</button>
+      <input type="descuento" id="descuento" placeholder="Ingrese cupon de descuento">
+      <button onclick="Descuento()">Aplicar</button>
+    </div>
+
+
+    <!-----------------PAGAR-------------->
+    <br>
+    <div class="Pedido">
+    <button onclick="pedido()">Finalizar pedido</button>
+    </div>
     </div>
   </div>
-    
+    <br>
+
+   <!--FOOTER-->
+     <footer>
+    <p>&copy; 2025 Mi Nombre. Todos los derechos reservados.</p>
+  </footer>
+
 
 </body>
 </html>

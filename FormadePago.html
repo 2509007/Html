@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAMBRIENTOS</title>
+    <script src="FormadePago.js"></script>
+    <link rel="stylesheet" href="FormadePago.css">
+</head>
+<body>
+  <div class="ticket">
+    <h1>FORMA DE PAGOS</h1>
+    <div class="linea"></div>
+    <form class="opciones">
+        <input type="checkbox" name="pago" value="efectivo"> Efectivo
+        <br>
+        <input type="checkbox" name="pago" value="credito"> Tarjeta de crédito
+        <br>
+        <input type="checkbox" name="pago" value="debito"> Tarjeta de débito
+        <br>
+        <input type="checkbox" name="pago" value="transferencia"> Transferencia bancaria
+        <br>
+        <input type="checkbox" name="pago" value="mercado"> Mercado Pago
+        <br>
+    <button type="button" class="boton-confirmar" onclick="confirmar()">Confirmar</button>
+    </form>
+    <div class="linea"></div>
+    <p>¡Gracias por tu compra!</p>
+    <button type="button" class="volver" onclick="volver()">Volver</button>
+  </div>
+
+
+
+</body>
+</html>
