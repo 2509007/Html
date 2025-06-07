@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="Index.css">
+    <script src="PaginaPrincipal.js"></script>
+    
+    <!--tipografia roja----------------------------------------->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap" rel="stylesheet">
+
+    <!--tipografia corrida-------------------------------->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Rubik+Glitch&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+
+    <title>Hambrientos</title>
+</head>
+<body>
+    <h1>Ingrese sus datos</h1>
+   
+    <form>
+        <br>
+        <p>Medio de Pago<select id="Pago">
+            <option value="Visa">Visa</option>
+            <option value="Mastercard">Mastercard</option>
+            <option value="Naranja">Naranja</option>
+            <option value="Efectivo">Efectivo</option>
+        </select></p>
+        <div id="imagen">
+            <img src="/imagenes/mediosdepago.png">
+        </div>
+        <p>Ingrese su DNI: <input type="text" id="dni" placeholder="ingrese su dni"></input></p>
+        <p>Ingrese su correo: <input type="text" id="correo" placeholder="ingrese su correo"></input></p>
+        <p>Ingrese su dirección: <input type="text" id="direccion" placeholder="ingrese su direccion"></input></p>
+        <p>Ingrese su numero de telefono: <input type="text" id="telefono" placeholder="ingrese su numero de telefono"></input></p>
+        <button type="button" onclick="enviar()">Enviar</button>
+        <button type="button" onclick="volver()">Volver</button>
+        <br>
+    </form>
+    
+</body>
+</html>
